@@ -45,7 +45,7 @@ const ChatBot = () => {
       if (actionObj.action === "add") {
         if (token && id) {
           const res = await axios.post(
-            `http://localhost:3000/api/tasks/add/${id}`,
+            `https://task-management-backend-xz9k.onrender.com/api/tasks/add/${id}`,
             {
               task_title: actionObj.task,
               task_desc: "Added via chatbot",
@@ -60,7 +60,7 @@ const ChatBot = () => {
       } else if (actionObj.action === "delete") {
         if (token) {
           await axios.delete(
-            `http://localhost:3000/api/tasks/delete/${actionObj.id}`,
+            `https://task-management-backend-xz9k.onrender.com/api/tasks/delete/${actionObj.id}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           if(actionObj.task==String){
@@ -74,7 +74,7 @@ const ChatBot = () => {
       } else if (actionObj.action === "update") {
         if (token) {
           const res = await axios.put(
-            `http://localhost:3000/api/tasks/update/${actionObj.id}`,
+            `https://task-management-backend-xz9k.onrender.com/api/tasks/update/${actionObj.id}`,
             { 
               task_title: actionObj.task,
               // task_desc: "Updated via chatbot",
@@ -88,7 +88,7 @@ const ChatBot = () => {
       } else if (actionObj.action === "list") {
         if (token && id) {
           const res = await axios.get(
-            `http://localhost:3000/api/users/tasks/${id}`,
+            `https://task-management-backend-xz9k.onrender.com/api/users/tasks/${id}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           if (res.data.length > 0) {
@@ -120,7 +120,7 @@ const ChatBot = () => {
     setChatHistory((prev) => [...prev, { sender: "user", text: message }]);
 
     try {
-      const response = await axios.post("http://localhost:3000/api/chat", {
+      const response = await axios.post("https://task-management-backend-xz9k.onrender.com/api/chat", {
         message,
       });
 

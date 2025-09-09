@@ -27,7 +27,7 @@ const Task = () => {
         }
         else{
             if(token){
-                await axios.post(`http://localhost:3000/api/tasks/add/${id}`,{...inputs},{
+                await axios.post(`https://task-management-backend-xz9k.onrender.com/api/tasks/add/${id}`,{...inputs},{
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -50,7 +50,7 @@ const Task = () => {
         // Array.splice(id, 1);
         // setArray([...Array]);
        if(token){
-            await axios.delete(`http://localhost:3000/api/tasks/delete/${id}`,{
+            await axios.delete(`https://task-management-backend-xz9k.onrender.com/api/tasks/delete/${id}`,{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -74,7 +74,7 @@ const Task = () => {
      useEffect(() => {
         if(token){
             const fetchtask = async() => {
-                await axios.get(`http://localhost:3000/api/users/tasks/${id}`,{
+                await axios.get(`https://task-management-backend-xz9k.onrender.com/api/users/tasks/${id}`,{
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }

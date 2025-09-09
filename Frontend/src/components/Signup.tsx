@@ -13,7 +13,7 @@ const Signup = () => {
     }
     const submit = async (e:any) => {
         e.preventDefault();
-        await axios.post("http://localhost:3000/api/users/signup", inputs)
+        await axios.post("https://task-management-backend-xz9k.onrender.com/api/users/signup", inputs)
         .then((res) => { console.log(res.data);
             if(res.data.message==="Sign Up Successfull"){
                 alert(res.data.message);

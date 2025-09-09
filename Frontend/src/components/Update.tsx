@@ -22,7 +22,7 @@ const Update = ({display, update}:UpdateProps) => {
       }
       else{
         if(token){
-          await axios.put(`http://localhost:3000/api/tasks/update/${update._id}`,{...inputs},{
+          await axios.put(`https://task-management-backend-xz9k.onrender.com/api/tasks/update/${update._id}`,{...inputs},{
             headers: {
               'Authorization': `Bearer ${token}`
             }

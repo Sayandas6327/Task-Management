@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: task-backend
+    env: node
+    rootDir: backend
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: MONGO_URL
+        value: your_mongo_connection_string
+      - key: JWT_SECRET
+        value: your_secret_key
+
+  - type: static
+    name: task-frontend
+    rootDir: frontend
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://task-backend.onrender.com

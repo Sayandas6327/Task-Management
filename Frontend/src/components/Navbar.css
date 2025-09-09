@@ -1,0 +1,29 @@
+.chaticon{
+    width: 30px;
+    height: 30px;
+}
+.chaticon:hover{
+    color: rgb(255, 0, 0.836);
+}
+.navbar-brand{
+    color: rgb(255, 0, 0.836);
+    font-size: 25px;
+    font-weight: bold;
+}
+.btn-nav{
+    background-color: rgb(255, 0, 0.836);
+    border-radius: 5px;
+    color: white!important;
+    font-weight: bold;
+}
+.btn-nav:hover{
+    background-color: black;
+}
+.text-nav{
+    font-weight: bold;
+}
+.text-nav:hover{
+    background-color: rgb(255, 0, 0.836);
+    border-radius: 5px;
+    color: white!important;
+}

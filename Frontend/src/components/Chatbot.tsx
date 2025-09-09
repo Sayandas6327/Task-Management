@@ -44,7 +44,7 @@ const ChatBot = () => {
     try {
       if (actionObj.action === "add") {
         if (token && id) {
-          const res = await axios.post(
+          await axios.post(
             `https://task-management-backend-xz9k.onrender.com/api/tasks/add/${id}`,
             {
               task_title: actionObj.task,
@@ -73,7 +73,7 @@ const ChatBot = () => {
         }
       } else if (actionObj.action === "update") {
         if (token) {
-          const res = await axios.put(
+          await axios.put(
             `https://task-management-backend-xz9k.onrender.com/api/tasks/update/${actionObj.id}`,
             { 
               task_title: actionObj.task,

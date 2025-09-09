@@ -1,4 +1,5 @@
-import React,{useEffect} from 'react'
+
+import {useEffect} from 'react'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Footer from './components/Footer'
@@ -31,7 +32,6 @@ const App = () => {
         </Routes>
         <Footer/>
       </Router>
-      {/* <Chat/> */}
     </div>
   )
 }
